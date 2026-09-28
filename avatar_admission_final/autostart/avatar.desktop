@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Avatar Admission
+Comment=Lance automatiquement l'avatar d'accueil au demarrage du bureau
+Exec=/home/pi/avatar_admission_final/start_avatar.sh
+X-GNOME-Autostart-enabled=true
+NoDisplay=true
+Terminal=false

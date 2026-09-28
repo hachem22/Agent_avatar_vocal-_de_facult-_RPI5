@@ -1,0 +1,18 @@
+faster-whisper>=1.0.3
+sounddevice>=0.4.6
+numpy>=1.26.4
+requests>=2.31.0
+scipy>=1.13.0
+pygame>=2.5.2
+gpiozero>=2.0
+# opencv-python (PAS "-headless") : necessaire pour la fenetre de debug
+# de la camera (cv2.imshow). La version headless ne supporte pas l'affichage.
+# IMPORTANT : la version doit rester < 5, car OpenCV 5.0 a deplace
+# CascadeClassifier (utilise par camera.py) vers opencv_contrib, qui n'est
+# pas inclus dans opencv-python classique. Sans cette contrainte, pip
+# installe la 5.x et camera.py plante avec "AttributeError: module 'cv2'
+# has no attribute 'CascadeClassifier'".
+opencv-python>=4.9.0,<5
+# picamera2 n'est PAS a installer via pip : sur Raspberry Pi OS il est
+# fourni par apt (voir INSTALLATION_RASPBERRY_PI.md). Uniquement necessaire
+# si CAMERA_TYPE = "picamera2" dans config.py (module camera CSI officiel).
